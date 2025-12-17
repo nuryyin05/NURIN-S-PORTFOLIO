@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <title>My Resume — Nurin Batrisyia</title>
+  <meta name="description" content="Personal resume website of Nurin Batrisyia" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+   <!-- VIDEO BACKGROUND (LIGHT) -->
+  <div class="video-background light-mode" id="lightBg">
+    <video autoplay muted loop id="bg-video-light" playsinline>
+      <source src="lightback.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- VIDEO BACKGROUND (DARK) -->
+  <div class="video-background dark-mode" id="darkBg">
+    <video autoplay muted loop id="bg-video-dark" playsinline>
+      <source src="darkback.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- NAVBAR -->
+   <header class="site-header">
+    <div class="container">
+      <nav class="main-nav" aria-label="Main navigation">
+        <h1 class="logo">Yeen's Portfolio</h1>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills-experience">Skills & Experience</a></li>
+          <li><a href="#family">Family</a></li>
+          <li><a href="#education">Education</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ⭐ WRAPPER UNTUK HERO + FLOATING BOX -->
+  <div class="hero-wrapper">
+
+   <!-- HERO -->
+<section id="hero" class="hero-section">
+  <div class="profile">
+    <img id="profileImg" src="portrait.img.jpg" alt="Portrait of Nurin Batrisyia" />
+
+    <h1 class="hero-title">Hi, I'm Nurin Batrisyia</h1>
+
+    <!-- TYPING SUBTITLE -->
+    <p class="hero-subtitle">
+      <span id="typing-text"></span>
+    </p>
+
+    <a href="#about" class="hero-cta">Explore My Journey ↓</a>
+  </div>
+</section>
+
+       <div class="social-links">
+  <a href="https://www.instagram.com" target="_blank" class="social-btn instagram">
+    <img src="instagram.jpg" alt="Instagram" />
+    <span>Instagram</span>
+  </a>
+
+  <a href="https://wa.me/60182205902" target="_blank" class="social-btn whatsapp">
+    <img src="wslogo.jpeg" alt="whatsapp" />
+    <span>WhatsApp</span>
+  </a>
+
+  <a href="https://open.spotify.com/user/lzbb0d1tblwlmysha5c1cecdu?si=7b80bae5820e4eba" target="_blank" class="social-btn spotify">
+    <img src="spotify.jpg" alt="Spotify" />
+    <span>Spotify</span>
+  </a>
+
+  <a href="mailto:nuryyin05@gmail.com" target="_blank" class="social-btn gmail">
+    <img src="gmail.jpg" alt="Gmail" />
+    <span>Gmail</span>
+  </a>
+</div>
+      </div>
+    </section>
+
+    <!-- ⭐ FLOATING BOX: DATE & TIME -->
+    <div class="floating-box left-box">
+      <div id="datetime"></div>
+    </div>
+<!-- ⭐ FLOATING BOX: AUDIO  -->
+    <div class="floating-box right-box">
+  <p>🎵Play a song🎵</p>
+  <audio id="bg-music" controls loop>
+    <source src="song1.mp3" type="audio/mp3">
+  </audio>
+  <div class="sparkle"></div>
+   
+  </div> <!-- END HERO WRAPPER -->
+
+  <!-- DARK MODE BUTTON -->
+  <button id="darkModeBtn" class="toggle-dark">🌙 Dark Mode</button>
+
+  <section id="about" class="about-section card fade-in">
+  <div class="about-content">
+
+    <!-- LEFT SIDE TEXT -->
+    <div class="about-text">
+      <h2>About Me</h2>
+    <p>
+      Hi! I'm Nurin Batrisyia binti Mazlisyah. Born in Kuala Lumpur on 21st May 2005 and stay at Shah Alam Selangor with my family. Currently studying at UiTM
+      Segamat Johor. I'm a last semester Science Information student with a deep interest 
+      in technology, data, and creative digital design. I love exploring how 
+      information works, how systems connect, and how designs can help people 
+      understand better.
+    </p>
+    <p>
+     My passion revolves around website building, 
+      digital organisation, and anything that sparks creativity. Here you can see my, skills and experience, education and family. 💜
+    </p>
+  </div>
+  
+  <!-- RIGHT SIDE IMAGE SLIDESHOW -->
+    <div class="about-image">
+      <img id="aboutSlideshow" src="image1.jpg" alt="About Me Photo" />
+    </div>
+
+  </div> <!-- END about-content -->
+
+  <!-- 3 CREATIVE BOXES + EXTRA -->
+<div class="creative-boxes">
+
+ <div class="creative-box" id="myMoviesBtn" data-target="moviesModal">🍿✨ My Comfort Movies</div>
+<div class="creative-box" id="myPlaylistBtn" data-target="playlistModal">🎵 Fav Playlist</div>
+<div class="creative-box" id="myTVBtn" data-target="tvModal">📺 Fav TV Show</div>
+<div class="creative-box" id="myFoodBtn" data-target="foodModal">🧫 Fav Food and Drink</div>
+</div>
+
+<!-- MOVIES LIST MODAL -->
+<div id="moviesModal" class="modal">
+  <div class="modal-content">
+    <span id="closeMoviesModal" class="close">&times;</span>
+    <h2>My Comfort Movies</h2>
+    <ul class="movies-list">
+      <li><a href="https://youtu.be/ywgFa00pG7s?si=1tzjOFI3FNYvT4UU" target="_blank">White Chicks</a></li>
+      <li><a href="https://youtu.be/2XhJb80jt_E?si=XMJJP9CN5UriHv8w" target="_blank">Manisnya Cinta Di Cappadocia</a></li>
+      <li><a href="https://youtu.be/j0kro6SuwxM?si=8Y37MBITaiNbc_5v" target="_blank">Love At First Sight</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- PLAYLIST MODAL -->
+<div id="playlistModal" class="modal">
+  <div class="modal-content">
+    <span id="closePlaylistModal" class="close">&times;</span>
+    <h2>Fav Playlist</h2>
+    <ul class="playlist-list">
+      <li><a href="https://open.spotify.com/playlist/3E6TVj3ShWHfNnBkKLMwPr?si=1d4911f3ffe047d3" target="_blank">Spotify playlist</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- TV SHOW MODAL -->
+<div id="tvModal" class="modal">
+  <div class="modal-content">
+    <span id="closeTVModal" class="close">&times;</span>
+    <h2>Fav TV Show</h2>
+    <ul class="tv-list">
+      <li><a href="https://youtu.be/eyiR8pO50JE?si=rnBGNjiTS3m6slDP" target="_blank">Bloodhounds</a></li>
+      <li><a href="https://youtu.be/ZOl7iOrD31Q?si=VXXlMiJTYUPBAmNg" target="_blank">My Name</a></li>
+      <li><a href="https://youtu.be/vI57bmljEKw?si=_tqWYvQdrikLDgoL" target="_blank">9-1-1 Series</a></li>
+      <li><a href="https://youtu.be/5ZvbQ48GAyk?si=-L3FXfk0SnuS1z2X" target="_blank">My Life With The Walters Boys</a></li>
+      <li><a href="https://youtu.be/kQdEHQLHDAI?si=FvZ5AVSSRlqs4FnI" target="_blank">You</a></li>
+      <li><a href="https://youtu.be/gqhUlldiLEo?si=JplRHMjh42MrTdRx" target="_blank">Happiness</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- FOOD MODAL -->
+<div id="foodModal" class="modal">
+  <div class="modal-content">
+    <span id="closeFoodModal" class="close">&times;</span>
+    <h2>Fav Food</h2>
+    <ul class="food-list">
+      <li><a href="https://youtube.com/shorts/GBqbYeOIubQ?si=tMOqzvUDLQ6gKmBi" target="_blank">Matcha</a></li>
+      <li><a href="https://youtu.be/-E_O2PwZpCc?si=wDyHFcws7DamWioa" target="_blank">Fries</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="spot-gap"></div>
+
+
+<!-- Spotify Embed -->
+  <div class="spotify-embed">
+    <iframe style="border-radius:12px" 
+            src="https://open.spotify.com/embed/playlist/3E6TVj3ShWHfNnBkKLMwPr?utm_source=generator" 
+            width="100%" height="152" frameborder="0" allowfullscreen 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+    </iframe>
+  </div>
+
+</section>
+
+
+
+  <!-- ===== fixed: use safe id & classes that match your CSS ===== -->
+  <section id="skills-experience" class="card fade-in">
+  <h2>Skills & Experience</h2>
+  <div class="skill-list-container">
+    <ul class="skills-list">
+      <li>💻 HTML</li>
+      <li>🎨 CSS</li>
+      <li>⚡ JavaScript</li>
+      <li>🎵 Audio Editing</li>
+      <li>🎬 Video Editing</li>
+      <li>Microsoft Word</li>
+      <li>Microsoft Excel</li>
+      <li>Xampp</li>
+    </ul>
+  </div>
+
+  <section class="skills">
+    <h2>My Skills</h2>
+    <b>The level of my soft skills.</b>
+
+    <div class="skills-container">
+
+      <!-- Skill 3: Coding -->
+        <div class="skill-item">
+            <h3>Coding</h3>
+            <div class="progress-bar">
+                <div class="progress coding"></div>
+            </div>
+            <p class="skill-percentage">70%</p>
+        </div>
+        
+        <!-- Skill 2: English Fluency -->
+        <div class="skill-item">
+            <h3>English Fluency</h3>
+            <div class="progress-bar">
+                <div class="progress english"></div>
+            </div>
+            <p class="skill-percentage">89%</p>
+        </div>
+
+        <!-- Skill 1: Web Designing -->
+        <div class="skill-item">
+            <h3>Web Designing</h3>
+            <div class="progress-bar">
+                <div class="progress design"></div>
+            </div>
+            <p class="skill-percentage">85%</p>
+        </div>
+
+        <!-- Skill 4: Editing -->
+        <div class="skill-item">
+            <h3>Editing</h3>
+            <div class="progress-bar">
+                <div class="progress editing"></div>
+            </div>
+            <p class="skill-percentage">70%</p>
+        </div>
+
+        <!-- Skill 3: Coding -->
+        <div class="skill-item">
+            <h3>Critical Thinking</h3>
+            <div class="progress-bar">
+                <div class="progress coding"></div>
+            </div>
+            <p class="skill-percentage">90%</p>
+        </div>
+
+        <!-- Skill 3: Coding -->
+        <div class="skill-item">
+            <h3>Emotional Intelligence</h3>
+            <div class="progress-bar">
+                <div class="progress coding"></div>
+            </div>
+            <p class="skill-percentage">95%</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Click Here Image-->
+  <div class="skills-image-wrapper">
+  <a href="internship.html" target="_blank">
+    <img src="clickhere.png" alt="Skills Presentation">
+  </a>
+</div>
+</section>
+
+
+<section id="family" class="family-section card">
+  <h2 class="section-title">My Family</h2>
+
+  <div class="family-hero">
+    <img src="image5.jpeg" alt="My Family">
+
+    <p class="family-caption">
+      A little glimpse of my biggest support system 🤍
+    </p>
+
+    <div class="family-actions">
+      <a href="family-members.html" class="family-action-btn">
+        👨‍👩‍👧 Meet My Family
+      </a>
+
+      <a href="familygallery.html" class="family-action-btn alt">
+        📸 Family Photos
+      </a>
+    </div>
+  </div>
+</section>
+
+   <!-- ============================
+   EDUCATION SECTION TEASER
+============================ -->
+<section id="education" class="card education-section">
+  <h2 class="section-title">Education</h2>
+  <div class="education-card">
+    <div class="education-slideshow horizontal-slideshow">
+      <div class="slide"><img src="tadikalogo.jpeg" alt="Education 1"></div>
+      <div class="slide"><img src="sk18logo.jpeg" alt="Education 2"></div>
+      <div class="slide"><img src="smks19logo.jpeg" alt="Education 3"></div>
+      <div class="slide"><img src="uitmlogo.jpeg" alt="Education 4"></div>
+      <div class="slide"><img src="tadikamaps.jpeg" alt="Education 5"></div>
+      <div class="slide"><img src="skmaps.jpeg" alt="Education 6"></div>
+      <div class="slide"><img src="smksmaps.jpeg" alt="Education 7"></div>
+      <div class="slide"><img src="uitmmaps.jpeg" alt="Education 8"></div>
+    </div>
+    <button class="education-btn" onclick="window.location.href='education.html'">Click Here</button>
+  </div>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <time datetime="2025">2025</time> Nurin Batrisyia. <a href="#top">Back to top</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

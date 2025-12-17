@@ -1,0 +1,266 @@
+/* ============================
+   VIDEO BACKGROUND
+============================ */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================
+   BODY & GENERAL PAGE STYLES
+============================ */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+/* ============================
+   HEADER / NAVBAR
+============================ */
+header.family-header img {
+  width: 100%;
+  display: block;
+}
+
+/* ============================
+   GLASS NAVBAR
+============================ */
+.glass-navbar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 0 0 20px 20px;
+  padding: 15px 30px;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+.glass-navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.glass-navbar .nav-links a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: 0.25s ease;
+}
+
+.glass-navbar .nav-links a:hover {
+  background: rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(3px);
+  transform: translateY(-2px);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .glass-navbar {
+    width: 92%;
+    padding: 10px 18px;
+  }
+  .glass-navbar .nav-links {
+    gap: 18px;
+  }
+  .glass-navbar .nav-links a {
+    font-size: 14px;
+  }
+}
+
+/* ============================
+   FAMILY SECTION
+============================ */
+.family-section {
+  position: relative;
+  z-index: 1;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.family-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: #eae2ff;
+  margin-bottom: 40px;
+}
+
+/* ============================
+   FAMILY CARDS
+============================ */
+.family-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.family-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 65%;
+  max-width: 550px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 50px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: all 0.35s ease;
+  text-align: center;
+  overflow: hidden; /* untuk glow */
+}
+
+/* IMAGE */
+.family-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.family-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.45s ease;
+}
+
+/* TEXT */
+.family-card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #7b4bff;
+  margin-top: 15px;
+}
+
+.family-card p {
+  margin: 8px 0 0 0;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* ============================
+   HOVER EFFECTS — SOFT LIFT + IMAGE ZOOM + TEXT SLIDE
+============================ */
+.family-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(123, 75, 255, 0.35);
+}
+
+.family-card:hover img {
+  transform: scale(1.13);
+}
+
+.family-desc {
+  opacity: 1;
+  transform: translateY(8px);
+  transition: all 0.35s ease;
+}
+
+.family-card:hover .family-desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================
+   SUBTLE MAGICAL GRADIENT GLOW
+============================ */
+.family-card::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 50px;
+  background: linear-gradient(45deg, rgba(123,75,255,0.4), rgba(255,157,230,0.4));
+  background-size: 400% 400%;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: -1;
+  animation: gradientShift 20s ease infinite;
+}
+
+.family-card:hover::before {
+  opacity: 0.35;
+  transform: scale(1.03);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 768px) {
+  .family-card {
+    width: 90%;
+    padding: 20px;
+  }
+  .family-card img {
+    width: 100px;
+    height: 100px;
+  }
+  .family-card h3 {
+    font-size: 1.3rem;
+  }
+  .family-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================
+   LINKS & BUTTONS
+============================ */
+a {
+  color: #7b4bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ff9de6;
+}
+
+button {
+  background-color: #7b4bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #ff9de6;
+}
